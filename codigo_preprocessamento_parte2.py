@@ -4,7 +4,7 @@ import os
 # Diretório para guardar os CSVs (ajusta se necessário)
 output_dir = '/Users/eduardaferreira/Desktop'
 
-print("🔍 Diretório de saída:", output_dir)
+print("Diretório de saída:", output_dir)
 
 # Carrega o dataset original
 df = pd.read_csv('/Users/eduardaferreira/Desktop/digital_literacy_dataset.csv')
@@ -40,9 +40,9 @@ df_engage = df.groupby('Engagement_Level').agg(
 
 try:
     df_engage.to_csv(os.path.join(output_dir, 'engagement_summary.csv'), index=False)
-    print("✅ engagement_summary.csv criado com sucesso.")
+    print("engagement_summary.csv criado com sucesso.")
 except Exception as e:
-    print("❌ Erro ao criar engagement_summary.csv:", e)
+    print("Erro ao criar engagement_summary.csv:", e)
 
 
 # === 3. AGE LITERACY GROUPED ===
@@ -75,9 +75,9 @@ df_age_lit = df[[
 
 try:
     df_age_lit.to_csv(os.path.join(output_dir, 'age_literacy_grouped.csv'), index=False)
-    print("✅ age_literacy_grouped.csv criado com sucesso.")
+    print("age_literacy_grouped.csv criado com sucesso.")
 except Exception as e:
-    print("❌ Erro ao criar age_literacy_grouped.csv:", e)
+    print("Erro ao criar age_literacy_grouped.csv:", e)
 
 
 # === 4. EDUCATION SESSIONS SUMMARY ===
@@ -89,9 +89,9 @@ df_edu = df.groupby('Education_Level').agg(
 
 try:
     df_edu.to_csv(os.path.join(output_dir, 'education_sessions_summary.csv'), index=False)
-    print("✅ education_sessions_summary.csv criado com sucesso.")
+    print("education_sessions_summary.csv criado com sucesso.")
 except Exception as e:
-    print("❌ Erro ao criar education_sessions_summary.csv:", e)
+    print("Erro ao criar education_sessions_summary.csv:", e)
 
 
 # === 5. INCOME ADAPTABILITY SUMMARY ===
@@ -102,6 +102,6 @@ df_income = df.groupby('Household_Income').agg(
 
 try:
     df_income.to_csv(os.path.join(output_dir, 'income_adaptability_summary.csv'), index=False)
-    print("✅ income_adaptability_summary.csv criado com sucesso.")
+    print("income_adaptability_summary.csv criado com sucesso.")
 except Exception as e:
-    print("❌ Erro ao criar income_adaptability_summary.csv:", e)
+    print("Erro ao criar income_adaptability_summary.csv:", e)
