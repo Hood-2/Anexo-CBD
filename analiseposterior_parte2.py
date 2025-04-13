@@ -3,22 +3,22 @@ import matplotlib.pyplot as plt
 # === 1. PERFIL DEMOGRÁFICO COM MAIOR MELHORIA ===
 df_q1 = pd.read_csv('/Users/eduardaferreira/Desktop/q1.csv') 
 
-print("\n🔍 Query 1 - Top 5 melhorias:")
+print("\nQuery 1 - Top 5 melhorias:")
 print(df_q1.sort_values(by='avg_skill_improvement', ascending=False).head(5))
 
-print("\n📊 Média por género:")
+print("\nMédia por género:")
 print(df_q1.groupby('gender')['avg_skill_improvement'].mean())
 
-print("\n📊 Média por escolaridade:")
+print("\nMédia por escolaridade:")
 print(df_q1.groupby('education_level')['avg_skill_improvement'].mean())
 
-print("\n📊 Média por tipo de localização:")
+print("\nMédia por tipo de localização:")
 print(df_q1.groupby('location_type')['avg_skill_improvement'].mean())
 
 # === 3. LITERACY GAIN POR FAIXA ETÁRIA ===
 df_q3 = pd.read_csv('/Users/eduardaferreira/Desktop/q3.csv')
 
-print("\n📊 Query 3 - Literacy Gain por faixa etária:")
+print("\nQuery 3 - Literacy Gain por faixa etária:")
 media_q3 = df_q3.groupby('age_group')['literacy_gain'].mean().sort_values(ascending=False)
 print(media_q3)
 
